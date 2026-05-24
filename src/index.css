@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@theme {
+  --color-gcp-blue: #1a73e8;
+  --color-gcp-blue-hover: #174ea6;
+  --color-gcp-blue-light: #e8f0fe;
+  --color-gcp-gray-bg: #f8f9fa;
+  --color-gcp-gray-border: #dadce0;
+  --color-gcp-gray-text: #5f6368;
+  --color-gcp-gray-dark: #3c4043;
+  --color-gcp-green: #1e8e3e;
+  --color-gcp-green-light: #e6f4ea;
+  --color-gcp-red: #d93025;
+  --color-gcp-red-light: #fce8e6;
+  --color-gcp-yellow: #f9ab00;
+  
+  --font-sans: "Inter", "Roboto", "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-gcp-gray-bg text-gcp-gray-dark font-sans antialiased;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+}
+
+@layer components {
+  .gcp-button-primary {
+    @apply bg-gcp-blue text-white px-4 py-2 rounded font-medium hover:bg-gcp-blue-hover transition-colors flex items-center gap-2 text-sm;
+  }
+  
+  .gcp-button-secondary {
+    @apply bg-white text-gcp-blue border border-gcp-gray-border px-4 py-2 rounded font-medium hover:bg-gcp-blue-light transition-colors flex items-center gap-2 text-sm;
+  }
+
+  .gcp-card {
+    @apply bg-white border border-gcp-gray-border rounded-lg shadow-sm;
+  }
+}
